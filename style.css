@@ -1,0 +1,113 @@
+table {
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    font-family: Calibri, sans-serif;
+  }
+  
+td, th {
+    padding: 0.5em;
+    text-align: center;
+  }
+
+thead {
+  background-color: #199c77;
+  color: white
+}
+
+
+th:nth-child(1), td:nth-child(1) {
+  width: 10px;
+}
+
+th:nth-child(2), td:nth-child(2) {
+  width: 200px;
+}
+
+th:nth-child(3), td:nth-child(3) {
+  width: 90px;
+}
+
+th:nth-child(4), td:nth-child(4) {
+  width: 90px;
+}
+
+th:nth-child(5), td:nth-child(5) {
+  width: 60px;
+}
+
+th:nth-child(6), td:nth-child(6) {
+  width: 100px;
+}
+  
+td[data-date]::before {
+    content: attr(data-date);
+  }
+  
+tr:hover td[data-date]::before {
+    content: attr(data-date) " " attr(data-time);
+  }
+
+tbody {
+  background-color: #0b1513;
+  color: white;
+}
+
+tr:nth-child(even) {
+  background-color: #040b03;
+}
+  
+tbody tr:hover {
+    background-color: #202c24;
+    cursor: pointer;
+  }
+  
+tbody.link-select tr:hover {
+    background-color: #e6f7ff;
+  }
+  
+tbody td:not(:nth-child(4)),
+  thead td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+tbody td:nth-child(4) a {
+    text-decoration: none;
+    color: #0077cc;
+  }
+  
+tbody td:nth-child(4) a:hover {
+    text-decoration: underline;
+  }
+  
+tbody td:last-child {
+    text-align: center;
+  }
+
+#my-table {
+  text-align: center;
+}
+
+#my-table td {
+  text-align: center;
+}
+
+body {
+  background-color: #5fa4d5;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 0;
+}

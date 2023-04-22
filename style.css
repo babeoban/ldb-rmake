@@ -102,6 +102,7 @@ body {
   padding: 0;
 }
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -120,6 +121,8 @@ header {
   font-weight: bold;
   cursor: pointer;
   margin-right: 5px;
+  transition: background-color 0.5s ease;
+  width: 150px;
 }
 
 .black-button {
@@ -140,4 +143,39 @@ header {
 
 .gap {
   margin-top: 50px;
+}
+
+.categap {
+  margin-right: 30px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: calibri;
+}
+
+.custom-btn {
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 5px; 
+}
+
+.custom-btn img {
+  vertical-align: middle; 
+  width: 30px;
+  height: 30px;
+}
+
+body {
+  overflow-x: hidden;
 }

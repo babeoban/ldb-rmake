@@ -111,3 +111,33 @@ header {
   color: #fff;
   margin-top: 0;
 }
+
+.button {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.black-button {
+  background-color: #000;
+}
+
+.green-button {
+  background-color: #2ecb59;
+  color: black
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.gap {
+  margin-top: 50px;
+}

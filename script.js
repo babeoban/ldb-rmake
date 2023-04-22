@@ -37,20 +37,49 @@ fetch('data.json')
       const dateValue = record.date;
       const datemm = convertDateFormat(dateValue)
       const dateNumericValue = Date.parse(datemm);
-      const days = Math.floor((Date.now() - dateNumericValue) / (1000 * 60 * 60 * 24)) + " days";
-      date.textContent = days
+      const elapsedTime = Date.now() - dateNumericValue;
+      
+      if (elapsedTime >= (1000 * 60 * 60 * 24 * 365)) {
+        const years = Math.floor(elapsedTime / (1000 * 60 * 60 * 24 * 365)) + " years";
+        date.textContent = years;
+      } else if (elapsedTime >= (1000 * 60 * 60 * 24 * 30)) {
+        const months = Math.floor(elapsedTime / (1000 * 60 * 60 * 24 * 30)) + " months";
+        date.textContent = months;
+      } else if (elapsedTime >= (1000 * 60 * 60 * 24 * 7)) {
+        const weeks = Math.floor(elapsedTime / (1000 * 60 * 60 * 24 * 7)) + " weeks";
+        date.textContent = weeks;
+      } else {
+        const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24)) + " days";
+        date.textContent = days;
+      }
+      
       date.setAttribute('data', dateNumericValue);
       row.appendChild(date);
-
+      
       // Add event listener to show full date on hover
-      date.addEventListener('mouseover', () => {
+      row.addEventListener('mouseover', () => {
         date.textContent = dateValue;
       });
-
-      // Add event listener to show days count on mouseout
-      date.addEventListener('mouseout', () => {
-        date.textContent = days;
+      
+      // Add event listener to show elapsed time on mouseout
+      row.addEventListener('mouseout', () => {
+        if (elapsedTime >= (1000 * 60 * 60 * 24 * 365)) {
+          const years = Math.floor(elapsedTime / (1000 * 60 * 60 * 24 * 365)) + " years";
+          date.textContent = years;
+        } else if (elapsedTime >= (1000 * 60 * 60 * 24 * 30)) {
+          const months = Math.floor(elapsedTime / (1000 * 60 * 60 * 24 * 30)) + " months";
+          date.textContent = months;
+        } else if (elapsedTime >= (1000 * 60 * 60 * 24 * 7)) {
+          const weeks = Math.floor(elapsedTime / (1000 * 60 * 60 * 24 * 7)) + " weeks";
+          date.textContent = weeks;
+        } else {
+          const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24)) + " days";
+          date.textContent = days;
+        }
       });
+      
+      
+      
 
       // Add event listener to row to go to the link on click
       row.addEventListener('click', () => {

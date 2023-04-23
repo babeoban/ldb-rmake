@@ -15,7 +15,8 @@ td, th {
 
 thead {
   background-color: #199c77;
-  color: white
+  color: white;
+  cursor: default;
 }
 
 

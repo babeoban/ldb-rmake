@@ -245,3 +245,16 @@ ssgButton.addEventListener("click", () => {
   rsgButton.classList.add("black-button");
   rsgButton.classList.remove("green-button");
 });
+
+// Get the popup element
+var popup = document.getElementById("popup");
+
+// Open the popup
+function openPopup() {
+  popup.style.display = "block";
+}
+
+// Close the popup
+function closePopup() {
+  popup.style.display = "none";
+}

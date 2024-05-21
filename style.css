@@ -163,7 +163,11 @@ header {
   font-family: 'Mcfont', monospace;
 }
 
-
+#showshower{
+  transform: translateX(-10px);
+  position: absolute;
+  right: 0;
+}
 
 #nav2 li a img {
   width: 30px;
@@ -175,8 +179,8 @@ header {
 #nav2{
   display: flex;
   align-items: center;
+  justify-self: center;
   list-style-type: none;
-  margin-left: 19em;
   right: 0;
 }
 

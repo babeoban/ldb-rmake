@@ -1,22 +1,33 @@
+@keyframes animation {
+  0%{
+    background-color: #0c2124;
+}
+100%{
+    background-color: #1f454b;
+}
+} 
+
 table {
+    width: 65%;
+    font-size: 1.2em;
     border-collapse: collapse;
     margin: auto;
     text-align: center;
     border-collapse: collapse;
-    border-radius: 10px;
     overflow: hidden;
-    font-family: Calibri, sans-serif;
+    font-family: 'pxfont', sans-serif;
   }
   
 td, th {
     padding: 0.5em;
     text-align: center;
+    /* margin: 100px; */
   }
 
 thead {
-  background-color: #199c77;
+  height: 50px;
+  background-color: #102c30;
   color: white;
-  cursor: default;
 }
 
 
@@ -53,21 +64,23 @@ tr:hover td[data-date]::before {
   }
 
 tbody {
-  background-color: #0b1513;
+  background-color: #102c30;
   color: white;
 }
 
 tr:nth-child(even) {
-  background-color: #040b03;
+  background-color: #102c30;
 }
-  
+
 tbody tr:hover {
-    background-color: #202c24;
+    background-color: #1f454b;
     cursor: pointer;
+    animation: animation 0.4s;
   }
   
 tbody.link-select tr:hover {
     background-color: #e6f7ff;
+    animation: animation 0.4s;
   }
   
 tbody td:not(:nth-child(4)),
@@ -78,7 +91,7 @@ tbody td:not(:nth-child(4)),
   
 tbody td:nth-child(4) a {
     text-decoration: none;
-    color: #0077cc;
+    color: #102c30;
   }
   
 tbody td:nth-child(4) a:hover {
@@ -86,10 +99,12 @@ tbody td:nth-child(4) a:hover {
   }
   
 tbody td:last-child {
+  
     text-align: center;
   }
 
 #my-table {
+  
   text-align: center;
 }
 
@@ -98,45 +113,128 @@ tbody td:last-child {
 }
 
 body {
-  background-color: #5fa4d5;
+  background-color: #0c2124;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+  font-family: 'pxfont', monospace;
 }
 
+#openBtn{
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #0c2124;
+  border: 0px solid #8f2f6400;
+  margin-right: 1%;
+  right: 0;
+  position: absolute;
+  color: #fff;
+  border-radius: 0px;
+  font-size: 20px;
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  font-family:"pxfont", monospace;
+}
+#btsm:hover,
+#openBtn:hover {
+  cursor: pointer;
+  background-color: #1f454b;
+  animation: animation 0.4s;
+} 
+
+@font-face {
+  font-family: pxfont;
+  src: url(./font/Pixer-Regular.woff2);
+}
 
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 10px;
-  background-color: #333;
+  height: 120px;
+  background-color: #87ce34;
   color: #fff;
   margin-top: 0;
+  font-family: 'Mcfont', monospace;
+}
+
+
+
+#nav2 li a img {
+  width: 30px;
+  height: 30px;
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.322));
+  image-rendering: pixelated;
+}
+
+#nav2{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin-left: 19em;
+  right: 0;
+}
+
+#nav2 li:hover{
+  transform: translateX(-2px) translateY(-2px);
+  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.322));
+}
+
+#nav2 li:active{
+  transform: translateX(4px) translateY(4px);
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0));
+}
+
+footer{
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+  text-align: center;
+  margin-top: auto;
+}
+#foot{
+  position:relative;
+  bottom: 0;
+  display: inline-block;
 }
 
 .button {
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: #fff;
-  font-weight: bold;
   cursor: pointer;
-  margin-right: 5px;
+  border: 0px solid #8f2f6400;
+  color: #fff;
+  margin: 2px;
+  border-radius: 0px;
+  font-size: 20px;
+  height: 35px;
+  text-align: center;
+  font-family:"pxfont", monospace;
   transition: background-color 0.5s ease;
-  width: 150px;
+  width: 130px;
 }
 
 .black-button {
-  background-color: #000;
+  background-color: #0c2124;
 }
 
 .green-button {
-  background-color: #2ecb59;
+  background-color: #ffffff;
   color: black
+}
+
+.active:hover {
+  cursor: pointer;
+  background-color: #1f454b;
+  animation: animation 0.4s;
 }
 
 .center-container {
   display: flex;
+  margin-left: 1%;
   justify-content: center;
   align-items: center;
   height: 100%;
@@ -147,20 +245,45 @@ header {
 }
 
 .categap {
-  margin-right: 30px;
+  margin-right: 0px;
 }
 
-.header {
+#bg{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  background-color: #102c30;
+  height: 90px;
+  color: #fff;
+  font-size: 250%;
+}
+#lead{
+  margin-left: 20px;
+  font-family:"Mcfont", monospace;
+  font-weight: bold;
+}
+
+.mode{
+  display: flex;
+  margin-top: 2px;
+  align-items: center;
+  background-color: #102c30;
+  height: 50px;
+  color: #fff;
+  font-size: 250%;
 }
 
 .logo {
-  font-size: 2rem;
-  font-weight: bold;
-  font-family: calibri;
+  transform: translateX(15px) translateY(8px);
+  font-size: 1.8rem;
+  font-family: 'Mcfontbl', monospace;
+}
+.lg:nth-child(1){
+  transform: translateY(-3px);
+  font-size: 3rem;
+}
+
+.lg:nth-child(2){
+  transform: translateY(-50px);
 }
 
 .custom-btn {
@@ -182,10 +305,20 @@ body {
 }
 
 .big {
-  width: 200px;
-  height: 200px;
-  display: block;
-  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  margin-left: -25px;
+  filter: drop-shadow(0px 3px 2px rgba(0, 0, 0, 0.322));
+}
+
+@font-face {
+  font-family: Mcfont;
+  src: url(./font/Monocraft-no-ligatures.ttf);
+}
+
+@font-face {
+  font-family: Mcfontbl;
+  src: url(./font/MinecraftTen-VGORe.ttf);
 }
 
 h1 {
@@ -241,4 +374,94 @@ h1 {
   to {
     opacity: 1;
   }
+}
+.modal {
+  border: 0px solid #888;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.4);
+  padding-top: 60px;
+  animation-name: slideIn;
+  animation-duration: 0.5s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes popIn {
+  0% {transform: scale(0);}
+  100% {transform: scale(1);}
+}
+
+.modal-content {
+  background-color: #102c30;
+  margin: 5% auto;
+  padding: 20px;
+  font-size: 20px;
+  border: 0px solid #888;
+  width: 80%;
+  color: white;
+  font-family: 'pxfont', monospace;
+  animation-name: popIn;
+  animation-duration: 0.5s;
+}
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Mcfont', monospace;
+}
+.close:hover,
+.close:focus {
+  color: #aaa;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Mcfont', monospace;
+}
+
+#su{
+  display: flex;
+  justify-content: center;
+  font-size: 1.5em;
+  font-family: 'Mcfont', monospace;
+}
+
+#btsm{
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #0c2124;
+  border: 0px solid #8f2f6400;
+  margin: 5px;
+  transform: translateY(8px);
+  color: #fff;
+  border-radius: 0px;
+  font-size: 20px;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  font-family:"pxfont", monospace;
+}
+
+textarea,
+input,
+select{
+  cursor: pointer;
+  background-color: #0c2124;
+  border: 0px solid #8f2f6400;
+  margin: 5px;
+  color: #fff;
+  border-radius: 0px;
+  font-size: 20px;
+  text-align: center;
+  font-family:"pxfont", monospace;
 }

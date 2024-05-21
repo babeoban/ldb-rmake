@@ -8,31 +8,91 @@
   </head>
   <body>
     <header class="header">
-      <div class="logo">Minecraft Speedrun Việt Nam</div>
-      <div class="button-container">
-        <a href="discord.gg/XKyCpdaR6C" class="custom-btn" title="Discord" target="_blank"><img src="img/discord.png"></a>
-        <a href="https://discord.com/invite/jmdFn3C" class="custom-btn" title="Javacord" target="_blank"><img src="img/javacord.png"></a>
-        <a href="https://github.com/babeoban/ldb-rmake" class="custom-btn" title="Github repo" target="_blank"><img src="img/github.png"></a>
+      <div class="gap"></div>
+        <img class="big" src="img/egg.png">
+      <div class="gap"></div>
+      <div class="logo">
+        <p class="lg">Minecraft</p>
+        <p class="lg">Speedrun Vietnam</p>
       </div>
-    </header>    
-    <div class="gap"></div>
-    <img class="big" src="img/egg.png">
-    <div class="gap"></div>
-    <h1>Bảng xếp hạng Việt Nam</h1>
-    <div class="center-container">
-      <button onclick="openPopup()" class="button black-button">Submit run</button>
-    </div>
-    <div id="popup" class="popup">
-      <div class="popup-content">
-        <span class="close" onclick="closePopup()">&times;</span>
-        <p>Cách để nộp màn chạy: Tham gia server discord dukmig: discord.gg/XKyCpdaR6C để biết thêm thông tin.</p>
+    </header>
+    <div id="bg"><p id="lead">
+      Leaderboards</p>
+      <div id="showshower">
+        <ul id="nav2">
+            <li><a href="discord.gg/XKyCpdaR6C" class="custom-btn" title="Discord" target="_blank"><img src="img/discord.png"></a></li>
+            <li><a href="https://github.com/babeoban/ldb-rmake" class="custom-btn" title="Github repo" target="_blank"><img src="img/github.png"></a></li>
+            <li><a href="https://www.speedrun.com/mc" class="custom-btn" title="speedrun.com" target="_blank"><img src="img/sprof.png"></a></li>
+          </ul>
       </div>
     </div>
-    <div class="gap"></div>
-    <div class="center-container">
-      <button id="rsg-button" class="button green-button">RSG 1.16+</button>
-      <button id="ssg-button" class="button black-button">SSG 1.16+</button>
+    <div class="mode">
+      <div class="center-container">
+        <button id="rsg-button" class="button green-button">RSG 1.16+</button>
+        <button id="ssg-button" class="button black-button">SSG 1.16+</button>
+      </div>
+      <button id="openBtn">Submit run</button>
     </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <form action="https://formspree.io/f/xjvndgvd" method="POST">
+                <label for="InGameName">
+                  In Game Name:
+                  <input type="text" required>
+                </label><br>
+                <label for="seedType">
+                  Seed Type:
+                  <select id="seedType" name="seedType">
+                    <option value="Set seed">Set seed</option>
+                    <option value="Random seed">Random seed</option>
+                  </select>
+                </label><br>
+                <label for="inGameTime">
+                  In-Game Time:<br>
+                  <!-- <input type="number" id="inGameTime-hours" name="inGameTime-hours" min="0" placeholder="Hours"> -->
+                  <input type="number" id="inGameTime-minutes" name="inGameTime-minutes" min="0" max="60" placeholder="Minutes" required>
+                  <input type="number" id="inGameTime-seconds" name="inGameTime-seconds" min="0" max="59" placeholder="Seconds" required>
+                  <input type="number" id="inGameTime-milliseconds" name="inGameTime-milliseconds" min="0" max="999" placeholder="Miliseconds" required><br>
+                </label>
+                <label for="time">
+                  Time:<br>
+                  <!-- <input type="number" id="time-hours" name="time-hours" min="0" placeholder="Hours"> -->
+                  <input type="number" id="time-minutes" name="time-minutes" min="0" max="60" placeholder="Minutes" required>
+                  <input type="number" id="time-seconds" name="time-seconds" min="0" max="59" placeholder="Seconds" required>
+                  <input type="number" id="time-milliseconds" name="time-milliseconds" min="0" max="999" placeholder="Miliseconds" required><br>
+                </label>
+                <label for="videoURL">
+                  Video URL:<br>
+                  <input type="url" id="videoURL" name="videoURL" required>
+                </label><br>
+                <label for="f3">
+                  F3:
+                  <select id="f3" name="f3">
+                    <option value="F3">F3</option>
+                    <option value="No F3">No F3</option>
+                  </select>
+                </label><br>
+                <label for="date">
+                  Date:
+                  <input type="date" id="date" name="date" required>
+                </label><br>
+                <label for="status">
+                  Status:
+                  <select id="status" name="status">
+                    <option value="Verified">Verified</option>
+                    <option value="Not submitted">Not submitted</option>
+                  </select>
+                </label><br>
+                <label for="description">
+                  Description:
+                  <textarea id="description" name="description"></textarea>
+                </label><br>
+                <button type="submit" id="btsm">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="gap"></div>
     <div class="gap"></div>
     <table id="my-table">
       <thead>
@@ -48,6 +108,13 @@
       <tbody>
       </tbody>
     </table>    
+    <footer>
+      <span id="foot">
+          For feedback or issues, visit our github repository and open issue<br>
+          By CanhVjp & MelonLN
+      </span>
+    </footer>
     <script src="script.js"></script>
+    <script src="submit.js"></script>
   </body>
 </html>

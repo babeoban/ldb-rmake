@@ -94,6 +94,7 @@ fetch('rsg.json')
 
       // Add row to tbody
       tbody.appendChild(row);
+      ssgButton.classList.add('active')
     });
   });
 
@@ -225,11 +226,15 @@ function loadData(file) {
 const rsgButton = document.getElementById('rsg-button');
 rsgButton.addEventListener('click', () => {
   loadData('rsg.json');
+  ssgButton.classList.add('active'); 
+  rsgButton.classList.remove('active');
 });
 
 const ssgButton = document.getElementById('ssg-button');
 ssgButton.addEventListener('click', () => {
   loadData('ssg.json');
+  rsgButton.classList.add('active'); 
+  ssgButton.classList.remove('active');
 });
 
 rsgButton.addEventListener("click", () => {
@@ -258,3 +263,17 @@ function openPopup() {
 function closePopup() {
   popup.style.display = "none";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  var navItems = document.querySelectorAll("#nav2 li");
+  navItems.forEach(function(navItem) {
+      navItem.addEventListener("mousedown", function() {
+          var img = this.querySelector("img");
+          img.style.filter = "drop-shadow(0px 0px 0px rgba(0, 0, 0, 0))";
+      });
+      navItem.addEventListener("mouseup", function() {
+          var img = this.querySelector("img");
+          img.style.filter = "drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.322))";
+      });
+  });
+});

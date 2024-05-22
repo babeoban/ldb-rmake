@@ -389,9 +389,9 @@ h1 {
   width: 100%;
   height: 100%;
   overflow: auto;
+  padding-top: 1.5%;
   background-color: rgb(0,0,0);
   background-color: rgba(0,0,0,0.4);
-  padding-top: 60px;
   animation-name: slideIn;
   animation-duration: 0.5s;
 }
@@ -408,7 +408,8 @@ h1 {
 
 .modal-content {
   background-color: #102c30;
-  margin: 5% auto;
+  /* transform: translateY(-7%); */
+  margin: 0% auto;
   padding: 20px;
   font-size: 20px;
   border: 0px solid #888;
@@ -418,6 +419,11 @@ h1 {
   animation-name: popIn;
   animation-duration: 0.5s;
 }
+
+#description {
+  max-width: 98.5%;
+}
+
 .close {
   color: #ffffff;
   float: right;
@@ -446,7 +452,7 @@ h1 {
   background-color: #0c2124;
   border: 0px solid #8f2f6400;
   margin: 5px;
-  transform: translateY(8px);
+  transform: translateX(905px) translateY(20%);
   color: #fff;
   border-radius: 0px;
   font-size: 20px;

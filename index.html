@@ -6,6 +6,10 @@
     <title>VN leaderboard</title>
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
+  <div id="loading-screen">
+    <img id="img2" src="./img/end_crystal.webp" alt="Loading image">
+    <p id="loading-text">Loading<span>.</span><span>.</span><span>.</span></p>
+  </div>  
   <body>
     <header class="header">
       <div class="gap"></div>
@@ -34,12 +38,12 @@
       <button id="openBtn">Submit run</button>
     </div>
     <div id="myModal" class="modal">
-        <div class="modal-content">
+        <div id="myModal-content" class="modal-content">
             <span class="close">×</span>
             <form action="https://formspree.io/f/xjvndgvd" method="POST">
                 <label for="InGameName">
                   In Game Name:
-                  <input type="text" id="InGameName" name="In-Game-Name" required>
+                  <input type="text" id="InGameName" name="In-Game-Name" placeholder="Type name..." required>
                 </label><br>
                 <label for="seedType">
                   Seed Type:
@@ -64,7 +68,7 @@
                 </label>
                 <label for="videoURL">
                   Video URL:<br>
-                  <input type="url" id="videoURL" name="videoURL" required>
+                  <input type="url" id="videoURL" name="videoURL" placeholder="Type URL..." required>
                 </label><br>
                 <label for="f3">
                   F3:
@@ -86,10 +90,16 @@
                 </label><br>
                 <label for="description">
                   Description:<br>
-                  <textarea id="description" name="description"></textarea>
+                  <textarea id="description" name="description" placeholder="Type..."></textarea>
                 </label><br>
+                <div id="lbt">
                   <button type="submit" id="btsm">Submit</button>
+                </div>
             </form>
+            <div class="contai">
+              <img id="img1" src="./img/end_crystal.webp" alt="img1">
+              <p id="sp">MCSR Vietnam</p>
+            </div>
         </div>
     </div>
     <div class="gap"></div>

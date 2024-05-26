@@ -401,7 +401,7 @@ h1 {
   padding: 20px;
   font-size: 20px;
   border: 0px solid #888;
-  width: 50%;
+  width: 550px;
   color: white;
   font-family: 'pxfont', monospace;
   animation-name: popIn;
@@ -409,7 +409,10 @@ h1 {
 }
 
 #description {
+  min-width: 217px;
+  min-height: 48px;
   max-width: 98.5%;
+  max-height: 79px;
 }
 
 .close {
@@ -509,15 +512,16 @@ select{
 
 .contai {
   position: absolute;
+  text-align: center;
   right: 0;
   top: 50%;
-  transform: translatex(-50%) translateY(-50%);
+  transform: translatex(-60px) translateY(-210px);
 }
 
 #sp{
   font-weight: bold;
   font-size: 30.5px;
-  transform: translateX(-1.5px);
+  /* transform: translateX(-1px); */
   animation-name: fadeIn;
   animation-duration: 0.5s;
   font-family: 'Mcfontbl', monospace;

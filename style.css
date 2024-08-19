@@ -140,16 +140,39 @@ body {
   text-align: center;
   font-family:"pxfont", monospace;
 }
+#openBtn1:hover,
 #btsm:hover,
 #openBtn:hover {
   cursor: pointer;
   background-color: #1f454b;
   animation: animation 0.4s;
 } 
+#openBtn1{
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-color: #0c2124;
+  border: 0px solid #8f2f6400;
+  margin-right: 168px;
+  right: 0;
+  position: absolute;
+  color: #fff;
+  border-radius: 0px;
+  font-size: 20px;
+  height: 35px;
+  width: 150px;
+  text-align: center;
+  font-family:"pxfont", monospace;
+}
 
 @font-face {
   font-family: pxfont;
   src: url(./font/Pixer-Regular.woff2);
+}
+
+#myModal-content1{
+  font-family:"Mcfont", monospace;
 }
 
 header {
@@ -317,7 +340,7 @@ body {
 
 @font-face {
   font-family: Mcfont;
-  src: url(./font/Monocraft-no-ligatures.ttf);
+  src: url(./font/Pixelcraft.otf);
 }
 
 @font-face {
@@ -415,15 +438,18 @@ h1 {
   max-height: 79px;
 }
 
-.close {
+#close1,
+#close {
   color: #ffffff;
   float: right;
   font-size: 20px;
   font-weight: bold;
   font-family: 'Mcfont', monospace;
 }
-.close:hover,
-.close:focus {
+#close1:hover,
+#close:hover,
+#close1:focus,
+#close:focus {
   color: #aaa;
   text-decoration: none;
   cursor: pointer;
@@ -493,11 +519,24 @@ select{
   }
 }
 
+::-moz-selection { /* Code for Firefox */
+  color: #0c2124;
+  background: #88ff00;
+}
+::selection {
+  color: #0c2124;
+  background: #88ff00;
+} 
+
+#lol{
+  font-size: 0.65em;
+}
+
 .modal-exit {
-  animation: slideOutDown 0.5s;
+  animation: slideOutDown 0.8s;
 }
 .modal-exit2 {
-  animation: fadeOut 0.5s;
+  animation: fadeOut 0.8s;
 }
 
 @keyframes fadeOut {

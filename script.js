@@ -288,4 +288,3 @@ window.addEventListener('load', function() {
     loadingScreen.style.display = 'none';
   }, 2000);
 });
-
